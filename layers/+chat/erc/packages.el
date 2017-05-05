@@ -29,6 +29,7 @@
         erc-yt
         linum
         persp-mode
+        (erc-nicklist :location local)
         ))
 
 (when (spacemacs/system-is-mac)
@@ -244,3 +245,8 @@
       (if erc-server-list
           (erc/default-servers)
         (call-interactively 'erc)))))
+
+(defun erc/init-erc-nicklist ()
+  (spacemacs|use-package-add-hook erc
+    :post-config
+    (use-package erc-nicklist)))
