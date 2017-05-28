@@ -54,3 +54,7 @@ private/
 /games/
 /doc/COMMUNITY.org
 /doc/CONTRIBUTING.org
+.edbi-ds-history
+emojis/
+layouts/
+oauth2.plstore
