@@ -37,6 +37,7 @@
                 :toggle org-enable-github-support)
         (ox-reveal :toggle org-enable-reveal-js-support)
         persp-mode
+        (org-depend :location built-in)
         ))
 
 (defun org/post-init-company ()
@@ -207,6 +208,7 @@ Will work on both org-mode and any mode that accepts plain html."
 
         ;; Subtree editing
         "sa" 'org-archive-subtree
+        "sA" 'org-archive-subtree-default
         "sb" 'org-tree-to-indirect-buffer
         "sh" 'org-promote-subtree
         "sj" 'org-move-subtree-down
@@ -603,3 +605,6 @@ Headline^^            Visit entry^^               Filter^^                    Da
         "j" 'org-journal-new-entry
         "n" 'org-journal-open-next-entry
         "p" 'org-journal-open-previous-entry))))
+
+(defun org/init-org-depend ()
+  (use-package org-depend))
